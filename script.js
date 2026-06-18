@@ -11,12 +11,7 @@ const questions = [
     },
     {
         question:"Which method stores data in localStorage?",
-        options:[
-            "localStorage.setItem()",
-            "storeData()",
-            "save()",
-            "insert()"
-        ],
+        options:["localStorage.setItem()","storeData()","save()","insert()"],
         answer:"localStorage.setItem()"
     },
     {
@@ -32,30 +27,45 @@ const questions = [
 ];
 
 let currentQuestion = 0;
+let score = 0;
 
-const questionEl =
-document.getElementById("question");
-
-const optionsEl =
-document.getElementById("options");
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const nextBtn = document.getElementById("nextBtn");
 
 function loadQuestion(){
 
     const q = questions[currentQuestion];
 
-    questionEl.textContent =
-    q.question;
+    questionEl.textContent = q.question;
 
     optionsEl.innerHTML = "";
 
     q.options.forEach(option => {
 
-        const button =
-        document.createElement("button");
+        const button = document.createElement("button");
 
         button.classList.add("option");
 
         button.textContent = option;
+
+        button.addEventListener("click",()=>{
+
+            const allOptions =
+                document.querySelectorAll(".option");
+
+            allOptions.forEach(btn=>{
+                btn.disabled = true;
+            });
+
+            if(option === q.answer){
+                button.style.backgroundColor = "lightgreen";
+                score++;
+            }else{
+                button.style.backgroundColor = "salmon";
+            }
+
+        });
 
         optionsEl.appendChild(button);
 
