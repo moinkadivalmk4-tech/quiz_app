@@ -89,3 +89,19 @@ nextBtn.addEventListener("click",()=>{
     }
 
 });
+function showResult(){
+
+    const percentage =
+        ((score / questions.length) * 100)
+        .toFixed(0);
+
+    document.querySelector(".quiz-box").innerHTML = `
+        <h2>Quiz Completed</h2>
+        <h3>Score: ${score}/${questions.length}</h3>
+        <h3>${percentage}%</h3>
+        <button onclick="location.reload()">
+            Restart Quiz
+        </button>
+    `;
+
+}
