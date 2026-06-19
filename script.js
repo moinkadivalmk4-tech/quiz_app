@@ -1,28 +1,38 @@
 const questions = [
     {
-        question:"Which keyword declares a variable in JavaScript?",
-        options:["var","float","string","define"],
-        answer:"var"
+        question:"Which company developed Java?",
+        options:["Microsoft","Oracle","Google","IBM"],
+        answer:"Oracle"
     },
     {
-        question:"Which HTML tag creates a hyperlink?",
-        options:["link","a","url","href"],
-        answer:"a"
+        question:"What does CPU stand for?",
+        options:[
+            "Central Processing Unit",
+            "Computer Processing Unit",
+            "Central Program Utility",
+            "Control Processing Unit"
+        ],
+        answer:"Central Processing Unit"
     },
     {
-        question:"Which method stores data in localStorage?",
-        options:["localStorage.setItem()","storeData()","save()","insert()"],
-        answer:"localStorage.setItem()"
+        question:"Which language is used for web page structure?",
+        options:["CSS","JavaScript","HTML","Python"],
+        answer:"HTML"
     },
     {
-        question:"Which symbol is used for comments in JavaScript?",
-        options:["//","##","<!--","**"],
+        question:"Which symbol is used for single-line comments in JavaScript?",
+        options:["//","#","<!--","**"],
         answer:"//"
     },
     {
-        question:"Which CSS property changes text color?",
-        options:["font-color","text-color","color","background"],
-        answer:"color"
+        question:"Which storage remains available after page refresh?",
+        options:[
+            "sessionStorage",
+            "localStorage",
+            "temporaryStorage",
+            "cacheStorage"
+        ],
+        answer:"localStorage"
     }
 ];
 
